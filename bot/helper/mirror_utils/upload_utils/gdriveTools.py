@@ -678,7 +678,7 @@ class GoogleDriveHelper:
             elif not response["files"]:
                 continue
             if not Title:
-                msg += f'<h4>Search Result For <i> {fileName} </i>
+                msg += f'<h4>Search Result For <i> {fileName} </i><h4>
                 Title = True
             if len(DRIVES_NAMES) > 1 and DRIVES_NAMES[index] is not None:
                 msg += f"╾────────────╼<br><b>{DRIVES_NAMES[index]}</b><br>╾────────────╼<br>"
