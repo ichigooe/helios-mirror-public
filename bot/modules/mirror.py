@@ -230,7 +230,9 @@ class MirrorListener(listeners.MirrorListeners):
                 sendMessage(msg, self.bot, self.update)
             else:
                 chat_id = str(self.message.chat.id)[4:]
-                msg += f'\n<b>Leeched By: </b>{uname}\n\n'
+                jkxleech=f"https://t.me/+EBJX16F4WSYxZDA1"
+                msg += f'\n<b>Leeched By: </b>{uname}\n'
+                msg +=f'\n<b>Join Leech channel\n\n'
                 fmsg = ''
                 for index, item in enumerate(list(files), start=1):
                     msg_id = files[item]
