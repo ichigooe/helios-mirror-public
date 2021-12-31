@@ -24,7 +24,7 @@ def list_drive(update, context):
             editMessage("No result found", reply, button)
 
     except IndexError:
-        sendMessage("send a search key along with command", context.bot, update)
+        sendMessage("send something to search with command", context.bot, update)
 
 
 search_handler = CommandHandler(
