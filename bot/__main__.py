@@ -62,8 +62,7 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/arshsisodiya/helios-mirror-public")
-    buttons.buildbutton("Channel", "https://t.me/heliosmirror")
+    buttons.buildbutton("Join Channel🔥", "https://t.me/jkxmirror")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -72,10 +71,10 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
-        sendMarkup('Not Authorized user, deploy your own mirror-leech bot', context.bot, update, reply_markup)
+        sendMarkup('Not Authorized user :(', context.bot, update, reply_markup)
 
 def restart(update, context):
-    restart_message = sendMessage("Restarting...", context.bot, update)
+    restart_message = sendMessage("Wait, I'm Restarting!!", context.bot, update)
     if Interval:
         Interval[0].cancel()
     alive.kill()
@@ -165,7 +164,7 @@ help_string_telegraph = f'''<br>
 '''
 
 help = telegraph.create_page(
-        title='Helios-Mirror Help',
+        title='Jkxbot Help',
         content=help_string_telegraph,
     )["path"]
 
@@ -232,7 +231,7 @@ def main():
     if os.path.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("Restarted successfully!", chat_id, msg_id)
+        bot.edit_message_text("Rebooted, Bring it on🔥", chat_id, msg_id)
         os.remove(".restartmsg")
     elif OWNER_ID:
         try:
